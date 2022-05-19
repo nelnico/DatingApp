@@ -33,6 +33,7 @@ namespace API
             app.UseCors(x =>
                 x.AllowAnyHeader()
                 .AllowAnyHeader()
+                .AllowAnyMethod()
                 .WithOrigins("https://localhost:4200")
             );
 
