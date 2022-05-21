@@ -65,7 +65,7 @@ namespace API.Controllers
             return BadRequest("Problem adding photo");
         }
 
-       [HttpPut("set-main-photo/{photoId}")]
+        [HttpPut("set-main-photo/{photoId}")]
         public async Task<ActionResult> SetMainPhoto(int photoId)
         {
             var user = await _userRepository.GetUserByUsernameAsync(User.GetUsername());
@@ -83,7 +83,7 @@ namespace API.Controllers
             return BadRequest("Failed to set main photo");
         }
 
-         [HttpDelete("delete-photo/{photoId}")]
+        [HttpDelete("delete-photo/{photoId}")]
         public async Task<ActionResult> DeletePhoto(int photoId)
         {
             var user = await _userRepository.GetUserByUsernameAsync(User.GetUsername());
@@ -106,6 +106,6 @@ namespace API.Controllers
 
             return BadRequest("Failed to delete the photo");
         }
-        
+
     }
 }
